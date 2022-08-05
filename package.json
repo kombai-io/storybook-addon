@@ -5,7 +5,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "undefined"
+    "url": "https://github.com/kombai-io/storybook-addon"
   },
   "author": "prashank<prashank@kombai.io>",
   "license": "MIT",
@@ -31,9 +31,7 @@
     "storybook": "start-storybook -p 6007",
     "start": "NODE_ENV=development npm run storybook -- --no-manager-cache --quiet",
     "build-storybook": "build-storybook",
-    "prerelease": "zx scripts/prepublish-checks.mjs",
-    "release": "npm run build && auto shipit",
-    "eject-ts": "zx scripts/eject-typescript.mjs"
+    "release": "npm run build && auto shipit"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
@@ -43,18 +41,14 @@
     "@babel/preset-typescript": "^7.13.0",
     "@storybook/addon-essentials": "^6.5.8",
     "@storybook/react": "^6.5.8",
-    "auto": "^10.3.0",
     "babel-loader": "^8.1.0",
-    "boxen": "^5.0.1",
     "concurrently": "^6.2.0",
-    "dedent": "^0.7.0",
     "prettier": "^2.3.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "rimraf": "^3.0.2",
-    "typescript": "^4.2.4",
-    "zx": "^1.14.1"
+    "typescript": "^4.2.4"
   },
   "peerDependencies": {
     "@storybook/addons": "^6.5.8",
@@ -74,7 +68,7 @@
     }
   },
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "storybook": {
     "displayName": "storybook-addon-storymeta",
