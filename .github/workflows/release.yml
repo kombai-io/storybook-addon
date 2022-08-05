@@ -1,5 +1,9 @@
 name: Release
 
+on:
+  branches:
+    - "master"
+
 jobs:
   release:
     runs-on: ubuntu-latest
