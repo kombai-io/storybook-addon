@@ -1,11 +1,12 @@
 name: Release
 
 on:
-  branches:
-    - "alpha"
-    - "beta"
-    - "next"
-    - "master"
+  push:
+    branches:
+      - "alpha"
+      - "beta"
+      - "next"
+      - "master"
 
 jobs:
   release:
