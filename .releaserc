@@ -1,0 +1,13 @@
+{
+  "branches": [
+    "dev",
+    {
+      "name": "alpha",
+      "prerelease": true
+    }
+  ],
+  "extends": "semantic-release-npm-github-publish",
+  "ci": false,
+  "dryRun": true,
+  "debug": false
+}
