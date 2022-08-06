@@ -12,9 +12,9 @@ const Wrapper = styled("div")({
   height: "100%",
 });
 
-export const PanelContent: React.FC<StoryNode> = (props) => {
-  const panels = useMemo(() => {
-    return {
+function PanelContent(props: StoryNode) {
+  const panels = useMemo(
+    () => ({
       docs: {
         title: "Docs",
         render: ({ active, key }: { active: boolean; key: string }) =>
@@ -33,12 +33,13 @@ export const PanelContent: React.FC<StoryNode> = (props) => {
             </div>
           ) : null,
       },
-    };
-  }, [props]);
+    }),
+    [props]
+  );
 
   return (
     <Wrapper>
-      <TabsState initial="json" absolute={true}>
+      <TabsState initial="json" absolute>
         {Object.entries(panels).map(([k, v]) => (
           <div key={k} id={k} title={v.title} style={{ height: "100%" }}>
             {v.render}
@@ -47,4 +48,6 @@ export const PanelContent: React.FC<StoryNode> = (props) => {
       </TabsState>
     </Wrapper>
   );
-};
+}
+
+export default PanelContent;

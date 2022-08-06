@@ -1,4 +1,4 @@
-import { styled, themes } from "@storybook/theming";
+import { styled } from "@storybook/theming";
 
 const StorySource = styled("pre")({});
 

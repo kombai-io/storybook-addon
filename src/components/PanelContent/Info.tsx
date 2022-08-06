@@ -12,7 +12,7 @@ import StoryRenderer from "./StoryRenderer";
 const Wrapper = styled("div")({
   padding: "10px 0",
 });
-const Info = (story: StoryNode) => {
+function Info(story: StoryNode) {
   return (
     <Wrapper>
       <Title>{story.name}</Title>
@@ -24,14 +24,14 @@ const Info = (story: StoryNode) => {
       <Section title="Component Props">
         <ArgsTable rows={story.component?.argTypes} />
       </Section>
-      <Section title={"Story"}>
-        <Fragment>
-          <StoryRenderer id={story.id}></StoryRenderer>
+      <Section title="Story">
+        <>
+          <StoryRenderer id={story.id} />
           <StorySource>{story.source}</StorySource>
-        </Fragment>
+        </>
       </Section>
     </Wrapper>
   );
-};
+}
 
 export default Info;
