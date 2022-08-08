@@ -2,8 +2,10 @@ import React, { useMemo } from "react";
 import { styled } from "@storybook/theming";
 import { TabsState } from "@storybook/components";
 import ReactJson from "react-json-view";
+import { ErrorBoundary } from "react-error-boundary";
 
 import Info from "./Info";
+import ErrorFallback from "./ErrorFallback";
 
 import { StoryNode } from "../../types";
 
@@ -12,9 +14,9 @@ const Wrapper = styled("div")({
   height: "100%",
 });
 
-function PanelContent(props: StoryNode) {
-  const panels = useMemo(
-    () => ({
+export const PanelContent: React.FC<StoryNode> = (props) => {
+  const panels = useMemo(() => {
+    return {
       docs: {
         title: "Docs",
         render: ({ active, key }: { active: boolean; key: string }) =>
@@ -33,21 +35,20 @@ function PanelContent(props: StoryNode) {
             </div>
           ) : null,
       },
-    }),
-    [props]
-  );
+    };
+  }, [props]);
 
   return (
-    <Wrapper>
-      <TabsState initial="json" absolute>
-        {Object.entries(panels).map(([k, v]) => (
-          <div key={k} id={k} title={v.title} style={{ height: "100%" }}>
-            {v.render}
-          </div>
-        ))}
-      </TabsState>
-    </Wrapper>
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <Wrapper>
+        <TabsState initial="json" absolute={true}>
+          {Object.entries(panels).map(([k, v]) => (
+            <div key={k} id={k} title={v.title} style={{ height: "100%" }}>
+              {v.render}
+            </div>
+          ))}
+        </TabsState>
+      </Wrapper>
+    </ErrorBoundary>
   );
-}
-
-export default PanelContent;
+};

@@ -4,21 +4,18 @@ const Section = ({
   children,
 }: {
   title: string;
-  children: React.ReactChild;
+  children: JSX.Element | JSX.Element[];
 }) => {
   return (
     <div
       style={{
-        borderRadius: "5px",
-        margin: "20px 0",
+        padding: "10px",
       }}
     >
       <div
         style={{
-          padding: "4px",
-          fontSize: "16px",
-          fontWeight: 460,
-          marginBottom: "-15px",
+          fontSize: "20px",
+          fontWeight: 600,
         }}
       >
         {title}

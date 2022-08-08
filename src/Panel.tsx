@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { useChannel, useStorybookApi } from "@storybook/api";
 import { AddonPanel } from "@storybook/components";
 
-import PanelContent from "./components/PanelContent";
+import { PanelContent } from "./components/PanelContent";
 import { EVENTS } from "./constants";
 import { StoryNode } from "./types";
 
