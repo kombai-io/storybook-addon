@@ -1,6 +1,6 @@
 {
   "name": "@kombai/storybook-addon-storymeta",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Adds a kombai panel for displaying meta for inividual stories",
   "keywords": [],
   "repository": {
