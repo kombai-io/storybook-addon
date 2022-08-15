@@ -14,6 +14,7 @@
   "types": "dist/ts/index.d.ts",
   "files": [
     "dist/**/*",
+    "src/**/*",
     "README.md",
     "*.js",
     "*.d.ts"
