@@ -20,6 +20,7 @@
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "@typescript-eslint/no-var-requires" : "off"
   }
 }
