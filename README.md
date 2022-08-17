@@ -27,6 +27,9 @@ npm run dev
 - This repo is forked from https://github.com/storybookjs/addon-kit
 - Anatomy of storybook addon https://storybook.js.org/tutorials/create-an-addon/react/en/introduction/
 
+# Loom Video
+- Overview https://www.loom.com/share/e15cd87cc0a44630a899c67589a17791
+- Todo Task 1 video https://www.loom.com/share/f09782b20dc94bad9595a7f79a9b4923
 # ToDo
 1. Make addon compatible with storybook 5 
 2. Verify addon with 
